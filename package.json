@@ -1,6 +1,6 @@
 {
   "name": "react-highlighted",
-  "version": "0.1.1",
+  "version": "0.1.2",
   "description": "highlight matching text with react",
   "main": "index.js",
   "author": "Victor Kotseruba <barbuzaster@gmail.com>",
