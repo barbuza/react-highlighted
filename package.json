@@ -1,6 +1,6 @@
 {
   "name": "react-highlighted",
-  "version": "0.2.0",
+  "version": "0.2.1",
   "description": "highlight matching text with react components",
   "main": "lib/highlight.js",
   "author": "Victor Kotseruba <barbuzaster@gmail.com>",

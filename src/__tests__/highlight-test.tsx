@@ -1,10 +1,10 @@
 import { shallow } from "enzyme";
 import * as React from "react";
-import { higlight } from "../highlight";
+import { highlight } from "../highlight";
 
 const span = (text: string) => <span>{text}</span>;
 const em = (text: string) => <em>{text}</em>;
-const high = (text: string, query: string, sensitive?: boolean) => higlight(text, query, span, em, sensitive);
+const high = (text: string, query: string, sensitive?: boolean) => highlight(text, query, span, em, sensitive);
 
 describe("hightlight", () => {
 

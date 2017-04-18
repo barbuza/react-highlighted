@@ -9,7 +9,7 @@ function matchIndex(text: string, query: string, sensitive?: boolean) {
 
 export type IFactory = (value: string) => React.ReactElement<any>;
 
-export function higlight(text: string, query: string, textFactory: IFactory, highlightFactory: IFactory, sensitive?: boolean): React.ReactFragment {
+export function highlight(text: string, query: string, textFactory: IFactory, highlightFactory: IFactory, sensitive?: boolean): React.ReactFragment {
   if (!query.length || matchIndex(text, query, sensitive) === -1) {
     return textFactory(text);
   }
