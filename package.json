@@ -1,30 +1,54 @@
 {
   "name": "react-highlighted",
-  "version": "0.1.2",
-  "description": "highlight matching text with react",
-  "main": "index.js",
+  "version": "0.2.0",
+  "description": "highlight matching text with react components",
+  "main": "lib/highlight.js",
   "author": "Victor Kotseruba <barbuzaster@gmail.com>",
+  "license": "MIT",
   "repository": {
     "type": "git",
     "url": "https://github.com/barbuza/react-highlighted.git"
   },
   "scripts": {
-    "prepublish": "babel -m umd -o index.js src/ReactHighlighted.js",
-    "test": "jest --verbose"
-  },
-  "devDependencies": {
-    "babel": "^5.8.34",
-    "babel-jest": "^5.3.0",
-    "jest-cli": "^0.7.1",
-    "react": "^0.14.2",
-    "react-addons-test-utils": "^0.14.2"
+    "test": "jest --coverage",
+    "lint": "tslint src/**/*.ts src/**/*.tsx",
+    "start": "jest --watch",
+    "build": "rimraf lib && tsc && rimraf lib/__tests__"
   },
   "jest": {
-    "scriptPreprocessor": "<rootDir>/node_modules/babel-jest",
-    "unmockedModulePathPatterns": [
-      "<rootDir>/node_modules/react",
-      "<rootDir>/node_modules/react-addons-test-utils",
-      "<rootDir>/node_modules/fbjs"
+    "transform": {
+      ".(ts|tsx)": "<rootDir>/node_modules/ts-jest/preprocessor.js"
+    },
+    "testResultsProcessor": "<rootDir>/node_modules/ts-jest/coverageprocessor.js",
+    "testRegex": "/__tests__/[^/]+-test\\.tsx?$",
+    "moduleFileExtensions": [
+      "ts",
+      "js",
+      "tsx"
+    ],
+    "setupTestFrameworkScriptFile": "./node_modules/jest-enzyme/lib/index.js",
+    "collectCoverageFrom": [
+      "src/**/*.ts",
+      "src/**/*.tsx",
+      "!src/__tests__/**/*.ts",
+      "!src/__tests__/**/*.tsx"
     ]
+  },
+  "dependencies": {
+    "@types/react": "^15.0.0",
+    "react": "^15.0.0"
+  },
+  "devDependencies": {
+    "@types/enzyme": "^2.7.9",
+    "@types/jest": "^19.2.2",
+    "enzyme": "^2.8.2",
+    "jest": "^19.0.2",
+    "jest-enzyme": "^3.0.1",
+    "react-addons-test-utils": "^15.5.1",
+    "react-dom": "^15.5.4",
+    "rimraf": "^2.6.1",
+    "ts-jest": "^19.0.10",
+    "tslint": "^5.1.0",
+    "typescript": "^2.2.2"
   }
 }

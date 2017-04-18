@@ -1,15 +1,22 @@
 # react-higlighted
 
-highlight phrases in text with react
+highlight matching text with react components
 
 ## usage
 
-```js
-import ReactHighlighted from 'react-higlighted';
+```tsx
+import { highlight } from "react-higlighted";
 
-render() {
-  return <ReactHighlighted text='foo bar spam' query='bar' />;
+const span = (text: string) => <span>{text}</span>;
+const em = (text: string) => <em>{text}</em>;
+
+function SearchResult(props: { text: string, query: string }) {
+  return (
+    <div className="result">
+      {highlight(props.text, props.query, span, em)}
+    </div>
+  );
 }
 ```
 
-find more detailed examples in [tests](/__tests__/ReactHighlighted-test.js)
+see more examples in [tests](/src/__tests__/highlight-test.tsx)
