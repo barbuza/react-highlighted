@@ -17,7 +17,7 @@
   version "19.2.2"
   resolved "https://registry.yarnpkg.com/@types/jest/-/jest-19.2.2.tgz#71f428be2fa6eb9f15bb0abc3cade67905f94839"
 
-"@types/react@*", "@types/react@^15.0.22":
+"@types/react@*", "@types/react@^15.0.0":
   version "15.0.22"
   resolved "https://registry.yarnpkg.com/@types/react/-/react-15.0.22.tgz#50803cde8d89f60a9b034f2dd0d619bc5f0273b5"
 
@@ -2279,7 +2279,7 @@ react-dom@^15.5.4:
     object-assign "^4.1.0"
     prop-types "~15.5.7"
 
-react@^15.5.4:
+react@^15.0.0:
   version "15.5.4"
   resolved "https://registry.yarnpkg.com/react/-/react-15.5.4.tgz#fa83eb01506ab237cdc1c8c3b1cea8de012bf047"
   dependencies:
